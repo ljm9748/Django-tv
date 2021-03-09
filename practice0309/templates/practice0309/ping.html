@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}ping{% endblock title %}
+
+{% block content %}
+<h1>ping</h1>
+<form action="/practice0309/pong/" method="GET">
+{% comment %} action: 수신인 method: 공개 혹은 비공개 {% endcomment %}
+  <label for="kor-name">한글이름</label>
+  <input type="text" id="kor-name" name="kor-name">
+  <label for="eng-name">English Name</label>
+  <input type="text" id="eng-name" name="eng-name">
+  {% comment %} name이 넘어가면 key값이 된다 {% endcomment %}
+
+  <input type="submit" value="전송">
+</form>
+{% endblock content %}

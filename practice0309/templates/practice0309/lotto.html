@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  practice0309
+{% endblock title %}
+
+{% block content %}
+  <h1> practice0309 </h1>
+  <h2> 로또 당첨 횟수를 알아보자</h2>
+  <hr>
+  <h2> {{ when }}회차 당첨번호: {{ lotto }} + 보너스: {{ bonus }}</h2>
+
+  <ul>
+  {% for winner in winners %}
+    <li> {{ forloop.counter }}등: {{ winner }}번 </li>
+  {% endfor %}
+    <li> 꽝: {{ looser }}번</li>
+  <ul>
+{% endblock content %}
+
+
